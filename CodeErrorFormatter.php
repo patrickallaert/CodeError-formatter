@@ -24,6 +24,10 @@
 
 echo "CodeErrorFormatter 1.0.0 by Patrick Allaert.\n\n";
 
+if ( !isset( $argv[1] ) || !is_file( $argv[1] ) ) {
+    die( "Usage:\n\tCodeErrorFormatter.php /path/to/CodeError.js\n\n" );
+}
+
 $data = json_decode(file_get_contents($argv[1]), true);
 
 foreach ( $data[1] as $key => $entries ) {
