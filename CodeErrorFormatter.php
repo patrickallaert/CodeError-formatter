@@ -106,7 +106,7 @@ foreach ( $data[1] as $key => $entries ) {
 
         // Printing line information
         if ( $checkstyleMode ) {
-            echo '    <error line="', $l1, '" message="';
+            echo '    <error line="', $l1, '" column="', $c1,'" message="';
             printf( $messageMapping[$key], trim( $entry['d'] ) );
             echo '" severity="error" source="HipHop.PHP.Analysis.', $key,'">', "\n";
         } else {
