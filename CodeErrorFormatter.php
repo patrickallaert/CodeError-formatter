@@ -108,7 +108,7 @@ foreach ( $data[1] as $key => $entries ) {
         if ( $checkstyleMode ) {
             echo '    <error line="', $l1, '" column="', $c1,'" message="';
             printf( $messageMapping[$key], trim( $entry['d'] ) );
-            echo '" severity="error" source="HipHop.PHP.Analysis.', $key,'">', "\n";
+            echo '" severity="error" source="HipHop.PHP.Analysis.', $key,'" />', "\n";
         } else {
             echo "\t", $l1, ":", $c1;
             if ( $l1 !== $l2 || $c1 !== $c2 )
